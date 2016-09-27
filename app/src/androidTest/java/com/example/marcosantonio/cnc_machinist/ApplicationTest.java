@@ -1,4 +1,4 @@
-package com.example.marcosantonio.myapplication;
+package com.example.marcosantonio.cnc_machinist;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

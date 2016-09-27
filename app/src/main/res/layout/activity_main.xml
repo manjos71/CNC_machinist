@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
 
-    tools:context="com.example.marcosantonio.myapplication.MainActivity">
+    tools:context="com.example.marcosantonio.cnc_machinist.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

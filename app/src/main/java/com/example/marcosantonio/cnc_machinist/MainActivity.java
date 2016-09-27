@@ -1,9 +1,7 @@
-package com.example.marcosantonio.myapplication;
+package com.example.marcosantonio.cnc_machinist;
 
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,7 +10,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import layout.Tela1Fragment;
+import layout.HomeFragment;
 import layout.Tela2Fragment;
 import layout.Tela3Fragment;
 import layout.Tela4Fragment;
@@ -37,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
 
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.main_content,new Tela1Fragment());
+        fragmentTransaction.add(R.id.main_content,new HomeFragment());
         fragmentTransaction.commit();
         //getSupportActionBar().setTitle("Tela1");
 
@@ -49,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
                 {
                     case R.id.navS1T1:
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.main_content,new Tela1Fragment());
+                        fragmentTransaction.replace(R.id.main_content,new HomeFragment());
                         fragmentTransaction.commit();
-                        getSupportActionBar().setTitle("Tela1");
+                        getSupportActionBar().setTitle(R.string.app_name);
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
                         break;
@@ -59,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.main_content,new Tela2Fragment());
                         fragmentTransaction.commit();
-                        getSupportActionBar().setTitle("Tela2");
+                        getSupportActionBar().setTitle(R.string.item2);
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
                         break;

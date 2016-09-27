@@ -1,4 +1,4 @@
-package com.example.marcosantonio.myapplication;
+package com.example.marcosantonio.cnc_machinist;
 
 import org.junit.Test;
 
