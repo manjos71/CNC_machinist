@@ -14,8 +14,8 @@
     <string name="window_1"><i>mm to inch</i></string>
     <string name="item2"><i>drill_tip</i></string>
     <string name="window_2"><i>drill_tip</i></string>
-    <string name="item3"><i>rugosidade</i></string>
-    <string name="window_3"><i>rugosidade</i></string>
+    <string name="item3"><i>roughness</i></string>
+    <string name="window_3"><i>roughness</i></string>
 
     <string name="text1">medida mm</string>
     <string name="text2">aproximação da fração</string>
