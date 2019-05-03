@@ -10,12 +10,152 @@
         android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/roughness"
         android:layout_width="140dp"
         android:layout_height="180dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:src="@drawable/rugosidade" />
+
+        <TextView
+            android:id="@+id/textRa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/roughness"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:ems="5"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:text="Ra" />
+
+        <TextView
+            android:id="@+id/textRT1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textRa"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:ems="5"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:text="RT" />
+
+        <TextView
+            android:id="@+id/textRe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textRT1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:ems="5"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:text="Re" />
+
+        <TextView
+            android:id="@+id/textFmax1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textRe"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:ems="5"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:text="Fmax" />
+
+        <requestFocus /><EditText
+        android:id="@+id/editRa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/roughness"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:ems="5"
+        android:hint="Ra"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/textRT2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editRa"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:ems="5"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:text="RT" />
+
+        <EditText
+            android:id="@+id/editRe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/editRa"
+            android:layout_alignBottom="@+id/textRe"
+            android:ems="5"
+            android:hint="Re"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/textFmax2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editRe"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:ems="5"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:text="Re" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botao"
+            android:onClick="OnClick"
+            android:textColor="#FFFFFF"
+            android:textStyle="italic"
+            android:textSize="15dp"
+            android:text="@string/clear"
+            android:layout_above="@+id/textView21"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginBottom="12dp"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_alignBaseline="@+id/button1"
+            android:background="@drawable/botao"
+            android:onClick="OnClick"
+            android:textColor="#FFFFFF"
+            android:textStyle="italic"
+            android:textSize="15dp"
+            android:text="@string/execute"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="Lucida-Handwriting"
+            android:text="®M.Anjos_©"
+            android:textStyle="italic" />
 
     </RelativeLayout>
 
