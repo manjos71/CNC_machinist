@@ -1,0 +1,191 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    tools:context="layout.Fragment_2">
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="140dp"
+        android:layout_height="180dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/escareador" />
+
+    <requestFocus /><EditText
+    android:id="@+id/editText1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginTop="2dp"
+    android:layout_marginRight="5dp"
+    android:ems="5"
+    android:hint="@string/bd"
+    android:textSize="15sp"
+    android:textAlignment="center"
+    android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/editText1"
+        android:layout_below="@+id/editText1"
+        android:ems="5"
+        android:hint="@string/md"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/editText1"
+        android:layout_below="@+id/editText2"
+        android:ems="5"
+        android:hint="α"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/editText1"
+        android:layout_alignBottom="@+id/editText1"
+        android:text="@string/drill_diameter" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignBottom="@+id/editText2"
+        android:text="@string/tip_diameter" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignBottom="@+id/editText3"
+        android:text="@string/tip_angle" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_alignBaseline="@+id/button1"
+        android:background="@drawable/botao"
+        android:onClick="OnClick"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic"
+        android:textSize="15dp"
+        android:text="@string/execute" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="Lucida-Handwriting"
+        android:text="®M.Anjos_©"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/botao"
+        android:onClick="OnClick"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic"
+        android:textSize="15dp"
+        android:text="@string/clear"
+        android:layout_above="@+id/textView21"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_discard"
+        android:layout_below="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/full_tip"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignStart="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_length"
+        android:layout_below="@+id/imageView1"
+        android:layout_alignStart="@+id/button1"
+        android:layout_marginTop="23dp" />
+
+    <TextView
+        android:id="@+id/labelres1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/result2"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignStart="@+id/lblres"
+        android:layout_alignParentRight="true"/>
+
+    <TextView android:id="@+id/labelres2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/result3"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_alignStart="@+id/lblres"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/lblres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="@string/result1"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_alignStart="@+id/editText3"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
+
+
+    </FrameLayout>

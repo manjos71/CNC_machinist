@@ -10,11 +10,11 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import layout.Fragment_1;
+import layout.Fragment_2;
+import layout.Fragment_3;
 import layout.HomeFragment;
-import layout.Tela2Fragment;
-import layout.Tela3Fragment;
-import layout.Tela4Fragment;
-import layout.Tela5Fragment;
+
 
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
@@ -47,15 +47,15 @@ public class MainActivity extends AppCompatActivity {
                 {
                     case R.id.navS1T1:
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.main_content,new HomeFragment());
+                        fragmentTransaction.replace(R.id.main_content,new Fragment_1());
                         fragmentTransaction.commit();
-                        getSupportActionBar().setTitle(R.string.app_name);
+                        getSupportActionBar().setTitle(R.string.window_1);
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.navS1T2:
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.main_content,new Tela2Fragment());
+                        fragmentTransaction.replace(R.id.main_content,new Fragment_2());
                         fragmentTransaction.commit();
                         getSupportActionBar().setTitle(R.string.item2);
                         item.setChecked(true);
@@ -63,15 +63,15 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.navS1T3:
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.main_content,new Tela3Fragment());
+                        fragmentTransaction.replace(R.id.main_content,new Fragment_3());
                         fragmentTransaction.commit();
-                        getSupportActionBar().setTitle("Tela3");
+                        getSupportActionBar().setTitle(R.string.item3);
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.navS2T1:
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.main_content,new Tela4Fragment());
+                        fragmentTransaction.replace(R.id.main_content,new HomeFragment());
                         fragmentTransaction.commit();
                         getSupportActionBar().setTitle("Tela4");
                         item.setChecked(true);
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.navS2T2:
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.main_content,new Tela5Fragment());
+                        fragmentTransaction.replace(R.id.main_content,new HomeFragment());
                         fragmentTransaction.commit();
                         getSupportActionBar().setTitle("Tela5");
                         item.setChecked(true);
