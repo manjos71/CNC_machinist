@@ -4,9 +4,7 @@ package layout;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -36,7 +34,7 @@ public class Fragment_1 extends Fragment implements View.OnClickListener{
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_fragment_1, container, false);
@@ -81,13 +79,26 @@ public class Fragment_1 extends Fragment implements View.OnClickListener{
                 DecimalFormat df = new DecimalFormat("0.0000");
                 DecimalFormat df2 = new DecimalFormat("0.00");
 
+                if (n1.getText().toString().equals("") || n2.getText().toString().equals("")) {
+                    AlertDialog.Builder dlg = new AlertDialog.Builder(getContext());
+                    dlg.setMessage(R.string.Message);
+                    dlg.setNeutralButton("OK", null);
+                    dlg.show();
+                    return;
+                }
+
                 v1 = Double.parseDouble(n1.getText().toString());
                 v2 = Float.parseFloat(n2.getText().toString());
 
                 //
-
-
                         dn1 = (int) (v2);//denominador da polegada
+
+                if ((dn1 != 128) && (dn1 != 64) && (dn1 != 32) && (dn1 != 16) && (dn1 != 8) && (dn1 != 4) && (dn1 != 2)) {
+                    AlertDialog.Builder dlg = new AlertDialog.Builder(getContext());
+                    dlg.setMessage(R.string.Message2);
+                    dlg.setNeutralButton("OK", null);
+                    dlg.show();
+                } else {
 
                             op = "/";
                             inc = "'";
@@ -122,7 +133,7 @@ public class Fragment_1 extends Fragment implements View.OnClickListener{
                                 lbl19.setText(txt + (r13 + 1) + inc + inc);
                             }
                             lbl20.setText(txt + df2.format(r20));
-                        }
+                        }}
 
 
         });

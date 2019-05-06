@@ -1,6 +1,5 @@
 package layout;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
@@ -15,16 +14,15 @@ import com.example.marcosantonio.cnc_machinist.R;
 
 import java.text.DecimalFormat;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
 public class Fragment_3 extends Fragment implements View.OnClickListener{
-    EditText ra, re;
-    TextView rt, fmax;
+    EditText rt, re;
+    TextView ra, fmax;
     Button cl;
     Button ex;
-    Double v3, tr, ta, rs1, rs2, rs3;
+    Double rs;
     String op = "";
 
     public Fragment_3() {
@@ -39,10 +37,10 @@ public class Fragment_3 extends Fragment implements View.OnClickListener{
         View view = inflater.inflate(R.layout.fragment_fragment_3, container, false);
 
         //find elements
-        ra = (EditText) view.findViewById(R.id.editText1);
-        re = (EditText) view.findViewById(R.id.editText2);
-        rt = (TextView) view.findViewById(R.id.lblres);
-        fmax = (TextView) view.findViewById(R.id.labelres1);
+        rt = (EditText) view.findViewById(R.id.editRt);
+        re = (EditText) view.findViewById(R.id.editRe);
+        ra = (TextView) view.findViewById(R.id.textRa2);
+        fmax = (TextView) view.findViewById(R.id.textFmax2);
         cl = (Button) view.findViewById(R.id.button1);
         ex = (Button) view.findViewById(R.id.button2);
 
@@ -63,37 +61,39 @@ public class Fragment_3 extends Fragment implements View.OnClickListener{
 
         DecimalFormat df = new DecimalFormat("0.00");
 
-        if (TextUtils.isEmpty(ra.getText().toString())
+        if (TextUtils.isEmpty(rt.getText().toString())
                 || TextUtils.isEmpty(re.getText().toString())) {
             return;
         }
         //
-        v1 = Float.parseFloat(ra.getText().toString());
+        v1 = Float.parseFloat(rt.getText().toString());
         v2 = Float.parseFloat(re.getText().toString());
 
         switch (v.getId()) {
             case R.id.button2:
+                if(rt.equals(1.6))
+                    ra.setText("0.3Ra");
                 op = " = ";
-                tr = Math.toRadians((180 - v3) / 2);
-                ta = Math.tan(tr);
-                rs1 = (ta * ((v1 - v2) / 2));
-                rs2 = (ta * ((v2) / 2));
-                rs3 = (ta * ((v1) / 2));
+                rs = Math.sqrt((v1*8*v2)/1000);
                 break;
             default:
                 break;
         }
-        fmax.setBackgroundColor(getResources().getColor(R.color.yellow));
-        fmax.setText(op + df.format(rs1));
+        fmax.setBackgroundColor(getResources().getColor(R.color.cyan));
+        fmax.setText(op + df.format(rs));
 
 
         switch (v.getId()) {
             case R.id.button1:
+                rt.setText("");
+                re.setText("");
                 fmax.setText("");
+                rt.setBackgroundColor(getResources().getColor(R.color.transparent));
+                re.setBackgroundColor(getResources().getColor(R.color.transparent));
                 fmax.setBackgroundColor(getResources().getColor(R.color.transparent));
                 //fmax.setText("");
 
                 break;
 
-    }
-}}
+        }
+    }}

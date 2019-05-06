@@ -1,6 +1,5 @@
 package layout;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
@@ -14,7 +13,6 @@ import android.widget.TextView;
 import com.example.marcosantonio.cnc_machinist.R;
 
 import java.text.DecimalFormat;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -86,9 +84,9 @@ public class Fragment_2 extends Fragment implements View.OnClickListener{
             default:
                 break;
         }
-        r1.setBackgroundColor(getResources().getColor(R.color.yellow));
-        r2.setBackgroundColor(getResources().getColor(R.color.yellow));
-        r3.setBackgroundColor(getResources().getColor(R.color.yellow));
+        r1.setBackgroundColor(getResources().getColor(R.color.light_pink));
+        r2.setBackgroundColor(getResources().getColor(R.color.light_pink));
+        r3.setBackgroundColor(getResources().getColor(R.color.light_pink));
         r1.setText(op + df.format(rs1));
         r2.setText(op + df.format(rs2));
         r3.setText(op + df.format(rs3));
