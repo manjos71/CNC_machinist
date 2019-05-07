@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import layout.Fragment_0;
 import layout.Fragment_1;
 import layout.Fragment_2;
 import layout.Fragment_3;
@@ -71,9 +72,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.navS2T1:
                         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.main_content,new HomeFragment());
+                        fragmentTransaction.replace(R.id.main_content,new Fragment_0());
                         fragmentTransaction.commit();
-                        getSupportActionBar().setTitle("Tela4");
+                        getSupportActionBar().setTitle(R.string.item4);
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
                         break;

@@ -33,7 +33,7 @@
         <menu>
             <item
                 android:id="@+id/navS2T1"
-                android:title="Tela4"
+                android:title="@string/item4"
                 android:icon="@drawable/menuq"
                 ></item>
 
