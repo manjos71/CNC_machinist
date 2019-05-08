@@ -49,6 +49,22 @@ public class Fragment_3 extends Fragment implements View.OnClickListener{
         cl.setOnClickListener(this);
         ex.setOnClickListener(this);
 
+        //
+
+
+        // Set text Ra
+        re.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //ra.setText("0.8Ra");
+                if(rt.getText().toString().equals(1.6))
+                    ra.setText("0.3Ra");
+                else if (rt.equals(2.0))
+                    ra.setText("0.4Ra");
+
+            }
+        });
+
 
         return view;
     }
@@ -71,8 +87,7 @@ public class Fragment_3 extends Fragment implements View.OnClickListener{
 
         switch (v.getId()) {
             case R.id.button2:
-                if(rt.equals(1.6))
-                    ra.setText("0.3Ra");
+
                 op = " = ";
                 rs = Math.sqrt((v1*8*v2)/1000);
                 break;
