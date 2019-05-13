@@ -45,6 +45,7 @@
     <string name="button2">Clear</string>
     <string name="Message">Data Blank</string>
     <string name="Message2">Not is inch fraction</string>
+    <string name="Message3">Data out range</string>
 
     <string name="drill_diameter">drill diameter</string>
     <string name="tip_diameter">tip diameter</string>

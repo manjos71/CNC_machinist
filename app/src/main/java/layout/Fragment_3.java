@@ -1,5 +1,6 @@
 package layout;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
@@ -18,8 +19,8 @@ import java.text.DecimalFormat;
  * A simple {@link Fragment} subclass.
  */
 public class Fragment_3 extends Fragment implements View.OnClickListener{
-    EditText rt, re;
-    TextView ra, fmax;
+    EditText ra, re;
+    TextView rt, fmax;
     Button cl;
     Button ex;
     Double rs;
@@ -37,9 +38,9 @@ public class Fragment_3 extends Fragment implements View.OnClickListener{
         View view = inflater.inflate(R.layout.fragment_fragment_3, container, false);
 
         //find elements
-        rt = (EditText) view.findViewById(R.id.editRt);
+        ra = (EditText) view.findViewById(R.id.editRa2);
         re = (EditText) view.findViewById(R.id.editRe);
-        ra = (TextView) view.findViewById(R.id.textRa2);
+        rt = (TextView) view.findViewById(R.id.textRt2);
         fmax = (TextView) view.findViewById(R.id.textFmax2);
         cl = (Button) view.findViewById(R.id.button1);
         ex = (Button) view.findViewById(R.id.button2);
@@ -56,12 +57,43 @@ public class Fragment_3 extends Fragment implements View.OnClickListener{
         re.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //ra.setText("0.8Ra");
-                if(rt.getText().toString().equals(1.6))
-                    ra.setText("0.3Ra");
-                else if (rt.equals(2.0))
-                    ra.setText("0.4Ra");
 
+                double ra2 = 0;
+
+                if (TextUtils.isEmpty(ra.getText().toString())
+                        || TextUtils.isEmpty(re.getText().toString())) {
+                    return;
+                }
+
+                ra2 = Double.parseDouble(ra.getText().toString());
+
+                if ((double) ra2 == 0.4) {
+                    rt.setText("2.0");
+                }
+                if ((double) ra2 == 0.8) {
+                    rt.setText("4.0");
+                }
+                if ((double) ra2 == 1.2) {
+                    rt.setText("6.0");
+                }
+                if ((double) ra2 == 1.6) {
+                    rt.setText("8.0");
+                }
+                if ((double) ra2 == 2.0) {
+                    rt.setText("10.0");
+                }
+                if ((double) ra2 == 2.4) {
+                    rt.setText("12.0");
+                }
+                if ((double) ra2 == 3.2) {
+                    rt.setText("15.0");
+                }
+                if ((double) ra2 == 6.3) {
+                    rt.setText("27.0");
+                }
+                if ((double) ra2 == 12.5) {
+                    rt.setText("45.0");
+                }
             }
         });
 
@@ -77,38 +109,41 @@ public class Fragment_3 extends Fragment implements View.OnClickListener{
 
         DecimalFormat df = new DecimalFormat("0.00");
 
-        if (TextUtils.isEmpty(rt.getText().toString())
-                || TextUtils.isEmpty(re.getText().toString())) {
+        if (TextUtils.isEmpty(ra.getText().toString())
+                || TextUtils.isEmpty(ra.getText().toString())) {
             return;
         }
         //
         v1 = Float.parseFloat(rt.getText().toString());
         v2 = Float.parseFloat(re.getText().toString());
 
-        switch (v.getId()) {
-            case R.id.button2:
-
-                op = " = ";
-                rs = Math.sqrt((v1*8*v2)/1000);
-                break;
-            default:
-                break;
-        }
-        fmax.setBackgroundColor(getResources().getColor(R.color.cyan));
-        fmax.setText(op + df.format(rs));
 
 
-        switch (v.getId()) {
-            case R.id.button1:
-                rt.setText("");
-                re.setText("");
-                fmax.setText("");
-                rt.setBackgroundColor(getResources().getColor(R.color.transparent));
-                re.setBackgroundColor(getResources().getColor(R.color.transparent));
-                fmax.setBackgroundColor(getResources().getColor(R.color.transparent));
-                //fmax.setText("");
+            switch (v.getId()) {
+                case R.id.button2:
 
-                break;
+                    op = " = ";
+                    rs = Math.sqrt((v1 * 8 * v2) / 1000);
+                    break;
+                default:
+                    break;
+            }
+            fmax.setBackgroundColor(getResources().getColor(R.color.cyan));
+            fmax.setText(op + df.format(rs));
 
-        }
+
+            switch (v.getId()) {
+                case R.id.button1:
+                    rt.setText("");
+                    re.setText("");
+                    fmax.setText("");
+                    rt.setBackgroundColor(getResources().getColor(R.color.transparent));
+                    re.setBackgroundColor(getResources().getColor(R.color.transparent));
+                    fmax.setBackgroundColor(getResources().getColor(R.color.transparent));
+
+
+                    break;
+
+            }
+        //}
     }}

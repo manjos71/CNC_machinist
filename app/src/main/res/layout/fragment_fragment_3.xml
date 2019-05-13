@@ -19,28 +19,28 @@
         android:src="@drawable/roughness" />
 
         <TextView
-            android:id="@+id/textRT"
+            android:id="@+id/textRa1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/editRt"
+            android:layout_alignBottom="@id/editRa2"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:height="30dp"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:text="RA" />
+
+        <TextView
+            android:id="@+id/textRt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textRt2"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="5dp"
             android:height="30dp"
             android:textSize="15sp"
             android:textAlignment="center"
             android:text="RT" />
-
-        <TextView
-            android:id="@+id/textRa1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/textRa2"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="5dp"
-            android:height="30dp"
-            android:textSize="15sp"
-            android:textAlignment="center"
-            android:text="Ra" />
 
         <TextView
             android:id="@+id/textRe"
@@ -67,38 +67,35 @@
             android:text="Fmax" />
 
         <requestFocus /><EditText
-        android:id="@+id/editRt"
+        android:id="@+id/editRa2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_below="@id/roughness"
         android:layout_alignParentRight="true"
         android:layout_marginRight="5dp"
         android:ems="5"
-        android:hint="RT"
+        android:hint="Ra"
         android:textSize="15sp"
         android:textAlignment="center"
         android:inputType="numberDecimal" />
 
         <TextView
-            android:id="@+id/textRa2"
+            android:id="@+id/textRt2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textRT"
-
+            android:layout_below="@+id/editRa2"
             android:layout_alignParentRight="true"
             android:layout_marginRight="5dp"
             android:ems="5"
             android:textSize="15sp"
             android:textAlignment="center"
-            android:text="Ra" />
+            android:text="Rt" />
 
         <EditText
             android:id="@+id/editRe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textRa2"
-
+            android:layout_below="@+id/textRt2"
             android:layout_alignParentRight="true"
             android:layout_marginRight="5dp"
             android:ems="5"
@@ -112,7 +109,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/editRe"
-
             android:layout_alignParentRight="true"
             android:layout_marginRight="5dp"
             android:ems="5"
